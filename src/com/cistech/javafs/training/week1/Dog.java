@@ -1,10 +1,14 @@
 package com.cistech.javafs.training.week1;
 
-public class Dog extends Animal{
+ public class Dog extends Animal implements Breed, Gender{
 
+    private final static int tail;
 
+    static {
+        tail = 1;
+    }
 
-    int legs;
+    private int legs;
 
     int age;
 
@@ -40,5 +44,32 @@ public class Dog extends Animal{
     @Override
     public void makeSound(){
         System.out.println("from Dog class");
+    }
+
+    @Override
+    public void printBreedName() {
+        System.out.println("some breed");
+    }
+
+    @Override
+    public void printBreedInUpperCase() {
+        Breed.super.printBreed();
+        Gender.super.printBreed();
+        System.out.println("SOME BREED");
+    }
+
+    @Override
+    public void printBreed() {
+        Breed.super.printBreed();
+    }
+
+    final protected void printDogName(){
+        int x = 7;
+        int y = 10;
+        // print
+    }
+
+    public static void printDogOwnerName(){
+        System.out.println("owner");
     }
 }

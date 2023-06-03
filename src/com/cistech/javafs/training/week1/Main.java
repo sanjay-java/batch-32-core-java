@@ -26,13 +26,15 @@ public class Main {
         Dog d = new Dog();
         Animal a2 = new Dog();
 
-        callMe(a2);
-        callMe(a);
+        //callMe(a2);
+        //callMe(a);
         callMe(d);
 
 
         Dog dog = new Dog();
         System.out.println(dog.age);
+        dog.printBreed();
+
 
         Dog dog1 = new Dog(23);
         System.out.println(dog1.age);
@@ -40,12 +42,20 @@ public class Main {
         Dog dog2 = new Dog(3,23);
         System.out.println(dog2.age);
 
+        callMe(d);
 
+        Dog.printDogOwnerName();
+
+        Dog.printDogOwnerName();
 
     }
 
-    static void callMe(Animal m){
+    /*static void callMe(Animal m){
         m.makeSound();
+    }*/
+
+    static void callMe(Breed b){
+
     }
 }
 
