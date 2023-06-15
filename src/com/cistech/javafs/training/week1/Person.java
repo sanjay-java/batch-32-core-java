@@ -1,7 +1,7 @@
 package com.cistech.javafs.training.week1;
 
 abstract public class Person {
-    private int age;
+    protected int age;
     private float weight;
     private float height;
 
